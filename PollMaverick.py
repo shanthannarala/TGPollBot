@@ -1,10 +1,11 @@
-from telegram.ext import Updater, Commandler
+from telegram.ext import Updater, CommandHandler
 import logging
+import config
 #Set log level to Info
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
-updater = Updater(token='1324713797:AAF1_fH79UD6rU4iokEVTcM5rnGS228hmhw', use_context = True)
+updater = Updater(token=config.PollLeaderToken, use_context = True)
 
 dispatcher = updater.dispatcher
 
